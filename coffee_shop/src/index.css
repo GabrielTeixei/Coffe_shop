@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Comfortaa:wght@300..700&family=Pacifico&display=swap');
+
+.nav_style{
+  font-family: "Comfortaa", sans-serif;
+}
+
+.subtitle{
+  font-family: "Comfortaa", sans-serif;
+}
+
+.title{
+  font-family: "Archivo", sans-serif;
+}
