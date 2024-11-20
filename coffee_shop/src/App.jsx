@@ -1,14 +1,21 @@
 import { useState } from 'react'
 import './App.css'
-import Image from "./assets/imgs/coffe1.jpg"
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
+import  assets  from './assets/imgs/assets';
 
 function App() {
-  const [nav , setNav] = useState(false)
+
   const [count, setCount] = useState(0)
+  const [nav , setNav] = useState(false)
+  const navigate = useNavigate();
+
+  const handleOrderNow = () => {
+    navigate('/Coffe');
+  };
 
   return (
     <>
@@ -46,11 +53,11 @@ function App() {
             <div><p className='subtitle text-center lg:text-[1.5rem] lg:text-left font-bold'>Where every sip tell a story...</p></div>
             <div><h1 className='title text-[5rem] lg:text-[8rem] font-bold mx-auto text-center lg:text-left'>Brew & Blend Coffe</h1></div>
             <div className='mx-auto lg:mx-0 text-center text-[1.3rem] bg-yellow-800 w-[80%] md:w-[70%] lg:w-[50%] font-bold px-2 py-3 border-2 border-yellow-800 rounded-[1.5rem]'> 
-              <button>Order Now</button>
+              <button onClick={handleOrderNow}> Order Now</button>
           </div>
           </div>
         </div>
-        <img className='w-full top-0 left-0 h-screen object-cover ' src={Image} alt="Coffee" />
+        <img className='w-full top-0 left-0 h-screen object-cover ' src={assets.coffe1} alt="Coffee" />
       </div>
     </>
   )
