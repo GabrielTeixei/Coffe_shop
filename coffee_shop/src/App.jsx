@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -95,8 +94,8 @@ function App() {
           <div className='mt-[6%] lg:mt-[4%] w-full lg:w-[50%] mx-auto'>
             <div><p className='subtitle text-center lg:text-[1.5rem] lg:text-left font-bold'>Where every sip tell a story...</p></div>
             <div><h1 className='title text-[5rem] lg:text-[8rem] font-bold mx-auto text-center lg:text-left'>Brew & Blend Coffe</h1></div>
-            <div className='mx-auto lg:mx-0 text-center text-[1.3rem] bg-yellow-800 w-[80%] md:w-[70%] lg:w-[50%] font-bold px-2 py-3 border-2 border-yellow-800 rounded-[1.5rem]'>
-              <button onClick={handleOrderNow}> Order Now</button>
+            <div  onClick={handleOrderNow} className='mx-auto lg:mx-0 text-center text-[1.3rem] bg-yellow-800 w-[80%] md:w-[70%] lg:w-[50%] font-bold px-2 py-3 border-2 border-yellow-800 rounded-[1.5rem]'>
+              <button> Order Now</button>
             </div>
           </div>
         </div>

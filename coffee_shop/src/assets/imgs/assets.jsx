@@ -5,6 +5,7 @@ import coffe from './coffe.jpg'
 import coffe1 from './coffe1.jpg'
 import Coffee_Baunilha from './Coffee_Baunilha.jpeg'
 import fundo from './fundo.jpeg'
+import grao  from './grão.jpg'
 
 export default {
 
@@ -15,5 +16,6 @@ export default {
     coffe1,
     Coffee_Baunilha,
     fundo,
+    grao,
 
 }
