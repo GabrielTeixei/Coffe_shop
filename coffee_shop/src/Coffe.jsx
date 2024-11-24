@@ -118,7 +118,7 @@ function Coffee() {
           style={{ backgroundImage: `url(${assets.grao})` }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 className="text-white text-2xl sm:text-5xl font-bold z-20 text-center">
+            <h1 className="text-white text-1xl sm:text-5xl font-bold z-20 text-center">
               Todos os melhores cafés estão aqui!!
             </h1>
           </div>
