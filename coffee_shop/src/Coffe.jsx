@@ -6,7 +6,6 @@ import { RxCross1 } from "react-icons/rx";
 import assets from './assets/imgs/assets';
 import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
-
 function Coffee() {
   const [nav, setNav] = useState(false);
   const [searchInput, setSearchInput] = useState("");
@@ -52,7 +51,6 @@ function Coffee() {
     { id: 5, name: 'Café Gourmet', price: 8.00, img: assets.coffe1 },
     { id: 6, name: 'Café Baunilha', price: 7.50, img: assets.Coffee_Baunilha },
   ];
-
   return (
     <>
       <nav className="nav_style text-white lg:flex items-center p-5 justify-between absolute top-0 left-0 w-full z-20">
@@ -94,17 +92,13 @@ function Coffee() {
           <CiShoppingCart size={35} />
         </div>
       </nav>
-      <div>
-        <ul
-          className={
-            nav
-              ? 'lg:flex-row flex flex-col gap-5 mx-auto text-center lg:gap-20 p-[2.3rem] text-[3rem] lg:text-[0.9rem] absolute bg-black top-0 left-0 h-screen w-full md:w-[70%] duration-1000 '
-              : 'duration-1000 top-[-100%] hidden'
-          }
-        >
-          <li className="ml-[90%] top-[-1rem] cursor-pointer">
-            <RxCross1 onClick={() => setNav(!nav)} />
-          </li>
+      <div className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 text-white flex flex-col justify-center items-center gap-6 z-30 transition-all duration-500 ${nav ? 'block' : 'hidden'}`}>
+        <RxCross1 
+          className="absolute top-4 right-4 text-white cursor-pointer"
+          size={30}
+          onClick={() => setNav(false)} 
+        />
+        <ul className="flex flex-col items-center gap-6 text-2xl">
           <li className="cursor-pointer">HOME</li>
           <li className="cursor-pointer">ABOUT US</li>
           <li className="cursor-pointer">MENU</li>
@@ -142,9 +136,11 @@ function Coffee() {
           ))}
         </div>
       </div>
+
       <footer
         className="text-white py-0.5"
-        style={{ backgroundImage: `url(${assets.grao})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
+        style={{ backgroundImage: `url(${assets.grao})`, backgroundSize: 'cover', backgroundPosition: 'center',}}
+      >
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
           <div className="text-center md:text-left">
             <h3 className="text-sm font-semibold">@Coffee</h3>
@@ -184,9 +180,7 @@ function Coffee() {
               <FaLinkedinIn size={20} />
             </a>
           </div>
-          
         </div>
-       
       </footer>
     </>
   );
