@@ -4,11 +4,13 @@ import { CiShoppingCart } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 import assets from './assets/imgs/assets';
+import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+
 
 function Coffee() {
-  const [nav, setNav] = useState(false); 
+  const [nav, setNav] = useState(false);
   const [searchInput, setSearchInput] = useState("");
-  const [suggestions, setSuggestions] = useState([]); 
+  const [suggestions, setSuggestions] = useState([]);
 
   const items = [
     "Argentino",
@@ -116,7 +118,7 @@ function Coffee() {
           style={{ backgroundImage: `url(${assets.grao})` }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 className="text-white text-3xl sm:text-5xl font-bold z-20">
+            <h1 className="text-white text-3xl sm:text-5xl font-bold z-20 text-center">
               Todos os melhores cafés estão aqui
             </h1>
           </div>
@@ -140,6 +142,52 @@ function Coffee() {
           ))}
         </div>
       </div>
+      <footer
+        className="text-white py-0.5"
+        style={{ backgroundImage: `url(${assets.grao})`, backgroundSize: 'cover', backgroundPosition: 'center',}}>
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+          <div className="text-center md:text-left">
+            <h3 className="text-sm font-semibold">@Coffee</h3>
+            <p className="text-xs text-gray-300">Siga-nos nas redes sociais!</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 transition duration-300"
+            >
+              <FaInstagram size={20} />
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 transition duration-300"
+            >
+              <FaFacebookF size={20} />
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 transition duration-300"
+            >
+              <FaTwitter size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 transition duration-300"
+            >
+              <FaLinkedinIn size={20} />
+            </a>
+          </div>
+          
+        </div>
+       
+      </footer>
     </>
   );
 }
